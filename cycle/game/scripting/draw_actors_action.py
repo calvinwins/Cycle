@@ -1,5 +1,5 @@
 from game.scripting.action import Action
-
+from game.shared.point import Point
 
 class DrawActorsAction(Action):
     """
@@ -26,7 +26,10 @@ class DrawActorsAction(Action):
             cast (Cast): The cast of Actors in the game.
             script (Script): The script of Actions in the game.
         """
-        #score = cast.get_first_actor("score1")
+        score1 = cast.get_first_actor("score1")
+        score2 = cast.get_first_actor("score2")
+        score2.set_text("Player Two: %d" % (score2.get_points()))
+        score1.set_text("Player One: %d" % (score1.get_points()))
         snake1 = cast.get_first_actor("snake1")
         snake2 = cast.get_first_actor("snake2")
         body1 = snake1.get_segments()
@@ -37,10 +40,13 @@ class DrawActorsAction(Action):
         for piece in body2:
             segments.append(piece)
 
+        score2.set_position(Point(785,0))
+
         messages = cast.get_actors("messages")
 
         self._video_service.clear_buffer()
         self._video_service.draw_actors(segments)
-        #self._video_service.draw_actor(score)
+        self._video_service.draw_actor(score1)
+        self._video_service.draw_actor(score2)
         self._video_service.draw_actors(messages, True)
         self._video_service.flush_buffer()
