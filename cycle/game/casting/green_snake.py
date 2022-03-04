@@ -10,7 +10,7 @@ class Green_Snake(Red_Snake):
     The responsibility of Snake is to move itself.
 
     Attributes:
-        _points (int): The number of points the food is worth.
+        _segments (int): The expansion of the snake.
     """
     def __init__(self):
         super().__init__()
