@@ -20,7 +20,7 @@ class Actor:
     def __init__(self):
         """Constructs a new Actor."""
         self._text = ""
-        self._font_size = 15
+        self._font_size = 30
         self._color = Color(255, 255, 255)
         self._position = Point(0, 0)
         self._velocity = Point(0, 0)
@@ -31,7 +31,7 @@ class Actor:
         Returns:
             Color: The actor's text color.
         """
-        return self._color
+        return self._color 
 
     def get_font_size(self):
         """Gets the actor's font size.

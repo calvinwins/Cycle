@@ -25,7 +25,7 @@ class Red_Snake(Actor):
         for segment in self._segments:
             segment.move_next()
         # update velocities
-        for i in range(len(self._segments) - 1, 0, -1):
+        for i in range(len(self._segments) -1, 0, -1):
             trailing = self._segments[i]
             previous = self._segments[i - 1]
             velocity = previous.get_velocity()
