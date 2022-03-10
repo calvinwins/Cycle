@@ -9,7 +9,10 @@ class Script:
     """
 
     def __init__(self):
-        """Constructs a new Action."""
+        """Constructs a new Action.
+        
+        Args:
+            _actions (dictionary): A dictionary of actions."""
         self._actions = {}
         
     def add_action(self, group, action):

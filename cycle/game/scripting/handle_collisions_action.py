@@ -15,7 +15,11 @@ class HandleCollisionsAction(Action):
     """
 
     def __init__(self):
-        """Constructs a new HandleCollisionsAction."""
+        """Constructs a new HandleCollisionsAction.
+        
+        Args:
+            _is_game_over (boolean): declares whether the game has ended.
+        """
         self._is_game_over = False
 
     def execute(self, cast, script):

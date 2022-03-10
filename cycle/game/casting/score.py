@@ -14,6 +14,11 @@ class Score(Actor):
         _test (string): Text given previously
     """
     def __init__(self):
+        """Creates and tracks the score
+        
+        Args:
+            super().__init__(): Initiates the Actor class
+            _points: tracks the points for the game."""
         super().__init__()
         self._points = 0
 
@@ -26,6 +31,10 @@ class Score(Actor):
         self._points += points
 
     def get_points(self):
-        """Gets self._points"""
+        """Gets self._points
+        
+        Returns:
+            _points: the point value
+        """
 
         return self._points

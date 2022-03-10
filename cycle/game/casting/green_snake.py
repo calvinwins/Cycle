@@ -10,7 +10,9 @@ class Green_Snake(Red_Snake):
     The responsibility of Snake is to move itself.
 
     Attributes:
-        _segments (int): The expansion of the snake.
+        super (Red_Snake): Inherits the Red_Snake class.
+        _segments (int): The segments of the snake.
+        _prepare_body (method): controls the segments of the snake.
     """
     def __init__(self):
         super().__init__()
@@ -19,6 +21,12 @@ class Green_Snake(Red_Snake):
 
 
     def _prepare_body(self):
+        """
+        Creates and moves each segment of the snake's body.
+
+        Args:
+            _segments: appends the '#' segments to the actor
+        """
         x = int(3 * constants.MAX_X / 4)
         y = int(constants.MAX_Y / 2)
 

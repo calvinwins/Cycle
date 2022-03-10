@@ -49,6 +49,7 @@ class ControlActorsAction(Action):
         snake1 = cast.get_first_actor("snake1")
         snake1.turn_head(self._direction1)
 
+        # left
         if self._keyboard_service.is_key_down('j'):
             self._direction2 = Point(-constants.CELL_SIZE, 0)
         

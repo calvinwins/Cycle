@@ -88,5 +88,10 @@ class VideoService:
             pyray.draw_line(x, 0, x, constants.MAX_Y, pyray.GRAY)
     
     def _get_x_offset(self, text, font_size):
+        """gets the width of the screen, then the center by dividing by 2:
+
+        Returns:
+            int (int)
+        """
         width = pyray.measure_text(text, font_size)
         return int(width / 2)

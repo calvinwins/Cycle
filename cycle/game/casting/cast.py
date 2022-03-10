@@ -9,7 +9,10 @@ class Cast:
     """
 
     def __init__(self):
-        """Constructs a new Actor."""
+        """Constructs a new Actor.
+        Args:
+            _actors: the dictionary of the different actors
+        """
         self._actors = {}
         
     def add_actor(self, group, actor):

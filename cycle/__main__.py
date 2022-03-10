@@ -1,5 +1,5 @@
 import constants
-
+#Imports the various classes.
 from game.casting.cast import Cast
 from game.casting.score import Score
 from game.casting.snake import Red_Snake

@@ -12,7 +12,9 @@ class KeyboardService:
     """
 
     def __init__(self):
-        """Constructs a new KeyboardService."""
+        """Constructs a new KeyboardService.
+        Args:
+            _keys (input): the pressed key to control the code."""
         self._keys = {}
         
         self._keys['w'] = pyray.KEY_W
